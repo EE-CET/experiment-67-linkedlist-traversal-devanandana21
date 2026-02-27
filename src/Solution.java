@@ -16,18 +16,17 @@ public class Solution {
         
         ListIterator<Integer> iterator = list.listIterator();
         
-        LinkedList<Integer> forward = new LinkedList<>();
+        System.out.print("Forward: ");
         while (iterator.hasNext()) {
-            forward.add(iterator.next());
+            System.out.print(iterator.next() + " ");
         }
         
-        LinkedList<Integer> backward = new LinkedList<>();
+        System.out.println();
+        
+        System.out.print("Backward: ");
         while (iterator.hasPrevious()) {
-            backward.add(iterator.previous());
+            System.out.print(iterator.previous() + " ");
         }
-        
-        System.out.println("Forward: " + forward);
-        System.out.println("Backward: " + backward);
         
         scanner.close();
     }
