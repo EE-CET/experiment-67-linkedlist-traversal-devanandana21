@@ -9,7 +9,6 @@ public class Solution {
         int n = scanner.nextInt();
         
         LinkedList<Integer> list = new LinkedList<>();
-        
         for (int i = 0; i < n; i++) {
             list.add(scanner.nextInt());
         }
@@ -18,14 +17,22 @@ public class Solution {
         
         System.out.print("Forward: ");
         while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " ");
+            int value = iterator.next();
+            System.out.print(value);
+            if (iterator.hasNext()) {
+                System.out.print(" ");
+            }
         }
         
         System.out.println();
         
         System.out.print("Backward: ");
         while (iterator.hasPrevious()) {
-            System.out.print(iterator.previous() + " ");
+            int value = iterator.previous();
+            System.out.print(value);
+            if (iterator.hasPrevious()) {
+                System.out.print(" ");
+            }
         }
         
         scanner.close();
